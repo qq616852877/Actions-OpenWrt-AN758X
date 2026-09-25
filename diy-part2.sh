@@ -46,5 +46,9 @@ if [ -f .config ]; then
   echo "CONFIG_PACKAGE_zoneinfo-asia=y    # 亚洲时区数据库（中国时区需要）" >> .config
   echo "✅ zoneinfo-asia 已加入 .config"
 fi
+# ===== 选中 luci-app-airoha-npu =====
+sed -i 's/^# CONFIG_PACKAGE_luci-app-airoha-npu is not set/CONFIG_PACKAGE_luci-app-airoha-npu=y/' .config
 
+# 如果配置项不存在，则直接追加
+grep -q "^CONFIG_PACKAGE_luci-app-airoha-npu=" .config || echo "CONFIG_PACKAGE_luci-app-airoha-npu=y" >> .config
 echo "🎉 diy-part2.sh 执行完毕"
