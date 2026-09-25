@@ -23,7 +23,7 @@ mkdir -p "$PKG_DIR"
 # ---------------------------------------------------------
 ADD_AIROHA_NPU=true    # luci-app-airoha-npu：Airoha SoC 状态页（NPU/CPU/Frame Engine/PPE）
 
-ADD_PASSWALL=true     # luci-app-passwall（含依赖源）
+ADD_PASSWALL=false     # luci-app-passwall（含依赖源）
 ADD_OPENCLASH=true    # luci-app-openclash ⚠ 依赖 Ruby/Rust，编译极慢
 ADD_MOSDNS=true       # luci-app-mosdns + v2ray-geodata
 ADD_LUCKY=true        # luci-app-lucky（DDNS + socat）
