@@ -141,8 +141,8 @@ fi
 
 # --- passwall ---
 if [ "$ADD_PASSWALL" = "true" ]; then
-  clone https://github.com/xiaorouji/openwrt-passwall-packages "$PKG_DIR/openwrt-passwall-packages" main
-  clone https://github.com/xiaorouji/openwrt-passwall "$PKG_DIR/openwrt-passwall" main
+  clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages "$PKG_DIR/openwrt-passwall-packages" main
+  clone https://github.com/Openwrt-Passwall/openwrt-passwall "$PKG_DIR/openwrt-passwall" main
   rm -rf "$PKG_DIR/openwrt-passwall/luci-app-passwall2" 2>/dev/null
 fi
 
